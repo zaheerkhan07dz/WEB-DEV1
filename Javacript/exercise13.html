@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 13</title>
+
+    <style>
+        .card {
+            display: flex;
+            border: 2px solid black;
+            width: 800px;
+            /* justify-content: center; */
+            align-items: center;
+            /* padding: 12px; */
+            margin: 2px;
+        }
+
+        .image img {
+            width: 180px;
+
+        }
+
+        .image {
+            position: relative;
+        }
+
+        .text h1,
+        p {
+            padding: 2px 0px;
+            margin-top: 3px;
+        }
+
+        .capsule {
+            position: absolute;
+            bottom: 4px;
+            z-index: 10;
+            right: 5px;
+            background: #242020;
+            opacity: 0.9;
+            color: white;
+            padding: 3px;
+            margin: 2px;
+            border-radius: 3px;
+            font-size: 14px;
+
+        }
+    </style>
+    <!-- <script src="exercise13.js"></script> -->
+</head>
+
+<body>
+    <div class="container">
+
+
+    </div>
+    <script>
+        function createCard(title, cName, views, monthsOld, duration, thumbnail) {
+            let views2
+            if (views < 1000000) {
+                views2 = views /1000 + "k"
+            }
+            else if(views > 1000000){
+                views2 = views / 1000000 + "M"
+
+            }
+            else{
+                views2 = views /1000 + "k"
+
+            }
+            let html = `<div class="card">
+                <div class="image">
+                    <img src="${thumbnail}" alt="">
+                        <div class="capsule">${duration}</div>
+
+                </div>
+                <div class="text">
+                    <h1>${title}</h1>
+                    <p>${cName}. ${views2} views. ${monthsOld} months ago</p>
+                </div>
+            </div>`
+
+            document.querySelector(".container").innerHTML += html
+            
+        }
+        createCard("Introduction to Web Dev | Sigma Web Dev #4", "CodeWithHarry", 789000, 2, "31:21", "https://i.ytimg.com/vi/gRLdHSabW3o/hqdefault.jpg?sqp=-oaymwEjCPYBEIoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDAEpAlxS-LhOIv1dSEFKwo938LrQ")
+    
+        createCard("Introduction to Web Dev | Sigma Web Dev #4", "CodeWithHarry", 7000, 2, "31:21", "https://i.ytimg.com/vi/gRLdHSabW3o/hqdefault.jpg?sqp=-oaymwEjCPYBEIoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDAEpAlxS-LhOIv1dSEFKwo938LrQ")
+    
+        createCard("Introduction to Web Dev | Sigma Web Dev #4", "CodeWithHarry", 317000, 2, "31:21", "https://i.ytimg.com/vi/gRLdHSabW3o/hqdefault.jpg?sqp=-oaymwEjCPYBEIoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDAEpAlxS-LhOIv1dSEFKwo938LrQ")
+    
+      
+          </script>
+
+
+</body>
+
+</html>

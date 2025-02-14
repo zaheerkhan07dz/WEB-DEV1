@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            background-color: #eb9494;
+            border: 2px solid black;
+            padding: 14px;
+        }
+
+        .childcontainer {
+            background-color: #ce5e5e;
+            border: 2px solid black;
+            margin: 15px;
+            padding: 14px;
+        }
+
+        .child {
+            background-color: #dc3c3c;
+            border: 2px solid black;
+            margin: 15px;
+            padding: 14px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="childcontainer">
+            <div class="child">
+
+                i am a child
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelector(".child").addEventListener("click", (e) => {
+            e.stopPropagation()
+            alert("child was pressed")
+        })
+        document.querySelector(".childcontainer").addEventListener("click", () => {
+            alert("childcontainer was pressed")
+        })
+        document.querySelector(".container").addEventListener("click", () => {
+            alert("container was pressed")
+        })
+
+        //particular operation runned after this time only one time
+        // let a =setInterval(() =>{
+        //  document.querySelector(".childcontainer").style.backgroundColor = "blue"
+        //  //we can also give random color by math.random
+        // }, 3000)
+        //yeh number return krega useyclearinterval(1) me daal dena
+        // console.log(a);
+
+        //particular operation runned after this time only one time
+        let a = setTimeout(() =>{
+            document.querySelector(".childcontainer").style.backgroundColor = "blue"
+            //we can also give random color by math.random
+        }, 2000)
+        //yeh number return krega useycleartimeout(n) me daal dena
+         console.log(a);
+         //isme clearTimeout hoga ussey operation perform hone ke pehle hi ruk jayega
+
+    </script>
+</body>
+
+</html>

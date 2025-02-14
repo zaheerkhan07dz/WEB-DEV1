@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = prompt("enter first number")
+        let b = prompt("enter second number")
+        // let sum = a+b// here a and b is string
+
+        if(isNaN(a)|| isNaN(b)){
+            throw SyntaxError("Sorry this is not allowed")
+        }
+        let sum = parseInt(a)+ parseInt(b)
+        let x =5;
+        // try {
+            
+        //     console.log(sum*x);
+        // } catch (error) {
+        //     console.log("error aa gya oyeee");
+            
+        // }
+        // finally{
+        //     console.log('files are closed');
+        // }
+
+
+
+        // try catch me kaam nhi krta yeh
+        // try {
+            
+        //     setTimeout(() => {
+        //       console.log(sum*x);
+        //     }, 4000);
+        //  } catch (error) {
+        //      console.log("error aa gya oyeee");
+             
+        //  }
+
+        function main(){
+            try {
+            
+                console.log(sum*x);
+                return true
+        } catch (error) {
+            console.log("error aa gya oyeee");
+            return false
+            
+        }
+        //this is interview question
+        //normally return ke baad ka code nhi chlta pr finally likhne se chal jata hai
+        finally{
+
+            console.log('files are closed');
+       
+        }
+        }
+       let c =main()
+    </script>
+</body>
+</html>

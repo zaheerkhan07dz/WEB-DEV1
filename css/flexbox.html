@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex box</title>
+    <style>
+        .container {
+            display: flex;
+            border: 2px solid red;
+            height: 80vh;
+            /* justify-content: center; */
+            align-items: center; 
+            /* when we have single line */
+            /* flex-direction: row-reverse; */
+            flex-wrap: wrap;
+            /* align-content: start; */
+            /* when we have multi line then we use align content */
+            /* there is no justifying items in flexbox */
+            /* there is only justifying content and align items */
+            flex-flow: row wrap;
+            /* gap: 30px; */
+            row-gap: 30px;
+            column-gap: 10px;
+            /* this can be written as */
+            gap: 30px 10px;
+
+        }
+
+        .order-1 {
+            
+            order: 1;
+        }
+
+        .order-2 {
+           
+            order: 2;
+        }
+        /* jitta bada order uttte baad me ayega element */
+
+        
+        .items{
+
+            /* flex-grow: 1; */
+            height: 90px;
+            width: 90px;
+            border: 2px solid black;
+            background-color: violet;
+            /* margin: 4px; */
+
+
+        }
+        .item1{
+            /* flex-grow: 2; */
+            /* flex-shrink: 2; */
+            align-self: flex-end;
+        
+        }
+        .item2{
+            /* flex-grow: 2; */
+            /* flex-shrink: 2; */
+            align-self: flex-start;
+        
+        }
+        /* remember cascade and specifity while giving properties to element */
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="items item1">1</div>
+            <div class="items ">2</div>
+            <div class="items">3</div>
+            <div class="items">4</div>
+            <div class="items order-1 ">89</div>
+            <div class="items order-2">69</div>
+            <div class="items item2">1</div>
+            <div class="items">1</div>
+            <div class="items">1</div>
+
+        </div>
+    </main>
+
+</body>
+
+</html>

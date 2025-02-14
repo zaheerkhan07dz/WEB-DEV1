@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // async function getdata() {
+        //     return new Promise((resolve,reject)=>{
+        //         setTimeout(() => {
+        //             resolve(455)
+
+        //         }, 3000);
+        //     })
+
+        // }
+        async function getdata() {
+            //let x = await fetch('https://jsonplaceholder.typicode.com/todos/1')
+            let x = await fetch('https://jsonplaceholder.typicode.com/posts', {
+                method: 'POST',
+                body: JSON.stringify({
+                    title: 'foo',
+                    body: 'bar',
+                    userId: 1,
+                }),
+                headers: {
+                    'Content-type': 'application/json; charset=UTF-8',
+                },
+            })
+            let data = await x.json()
+            // let data =  await x.text()
+            console.log(data);
+            //get request use to get data like searching any website by .com or any link
+            //post request use to submit data like forms
+            //put request use to update the data
+            //delete request use to delete the data
+
+
+        }
+        async function main() {
+
+            console.log("hello1");
+            console.log("hello2");
+            console.log("hello3");
+            console.log("hello4");
+            console.log("hello5");
+            let data = await getdata()
+
+            console.log(data);
+
+            console.log("task 2");
+            console.log("task 2 is processing");
+        }
+        main()
+
+        /*
+        settled means resolve or reject
+        resolve means promise has settled successfully
+        reject means promise has not settled successfully
+        
+        
+        promise is just putting the object which is delayed in the background and get value from it when finally executed
+        */
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

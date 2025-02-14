@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+    <style>
+        :root {
+            --color: rgb(146, 169, 236);
+            --seccolor: rgb(244, 187, 187);
+            --defop: 0.5;
+            /* CSS variables doent only hold colours but also other properties like opacity,padding etc */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav {
+            background-color: var(--color)
+        }
+
+        .container {
+            background-color: var(--seccolor)
+        }
+
+        ul {
+            display: flex;
+
+        }
+
+        ul li {
+            
+            list-style: none;
+            padding: 34px;
+            border: 2px solid var(--seccolor);
+        }
+
+        ul li:first-child {
+            opacity: var(--defop);
+            --color: rgb(33, 82, 231);
+            background-color: var(--color);
+            /* background-color: var(--common blue); */
+            /* If you give a variable which does not exist then you cal give colour in that bracket also */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus reiciendis, omnis dolores minus ullam
+        tempora placeat sit unde! Accusamus possimus illo nisi perspiciatis optio quo reiciendis doloremque libero id
+        voluptatem consequatur quas quod cum ab maxime velit accusantium laudantium, ad rem vitae minima est culpa.
+    </div>
+</body>
+
+</html>

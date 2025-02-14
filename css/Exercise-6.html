@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Navbar using flexbox</title>
+    <style>
+        nav{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-family: "Segoe UI";
+        }
+        .right ul{
+            display: flex;
+        }
+        .logo img{
+            width: 165px;
+            
+            
+        }
+        .right li{
+            display: inline;
+            list-style: none;
+            cursor: pointer;
+        }
+        
+
+        .right ul{
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            
+        }
+        .right ul li img{
+            padding: 0 7px;
+            width: 10px;
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://www.ultraedit.com/wp-content/uploads/2023/01/Dark-logo.png" alt="">
+
+            </div>
+                <div class="right">
+                    <ul>
+                        <li><span></span>Products</span><img src="https://www.svgrepo.com/show/80156/down-arrow.svg" alt=""></li>
+                        <li><span>Pricing</span><img src="https://www.svgrepo.com/show/80156/down-arrow.svg" alt=""></li>
+                        <li><span>Resources</span><img src="https://www.svgrepo.com/show/80156/down-arrow.svg" alt=""></li>
+                        <li><span>About us</span><img src="https://www.svgrepo.com/show/80156/down-arrow.svg" alt=""></li>
+                        <li><img src="" alt=""></li>
+                    </ul>
+                </div>
+            
+        </nav>
+    </header>
+    
+</body>
+</html>

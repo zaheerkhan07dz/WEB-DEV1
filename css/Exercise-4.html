@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>=Exercese 4 CSS MultiColor Website</title>
+
+    <!-- with the help of these color variables you can change the theme of yoyr website with a single click -->
+    
+    <style>
+        /* :root{
+            --primary-color:  rgb(182, 129, 231);
+            --text-color: white;
+            --secondary-color: rgb(220, 193, 246);
+            
+
+        } */
+        
+        :root{
+            --primary-color:  rgb(242, 107, 107);
+            --text-color: white;
+            --secondary-color: rgb(246, 175, 175);
+
+        }
+        body{
+            background-color: var(--secondary-color);
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins', sans-serif;
+        }
+        ul li{
+            list-style: none;
+            display: inline;
+            padding: 25px;
+            font-weight: lighter;
+            color: var(--text-color);
+        }
+        nav{
+            background-color: var(--primary-color);
+            padding: 12px 0;
+        }
+
+        ul li a{
+            text-decoration: none;
+            color: var(--text-color);
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="/">Services</a></li>
+                <li><a href="/">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+</body>
+</html>

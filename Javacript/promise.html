@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("heyyy i am promise");
+
+        let prom1 = new Promise((resolve, reject) =>{
+            let a = Math.random();
+            
+            if(a<0.5){
+                reject("math random is not supporting you");
+            }
+            else{
+                setTimeout(() => {
+                    console.log("heyy i am timmeout");
+                    resolve("harry")
+                }, 3000);
+                }
+            })
+
+        let prom12 = new Promise((resolve, reject) =>{
+            let a = Math.random();
+            if(a<0.5){
+                reject("math random is not supporting you 2");
+            }
+            else{
+                setTimeout(() => {
+                    console.log("heyy i am timmeout2");
+                    resolve("harry 2")
+                }, 1000);
+                }
+            })
+            
+        // prom1.then((a)=>{
+        //     console.log(a);
+        // }).catch((err)=>{
+        //     console.log(err);
+        // })
+        //here then means that when prom1 funtcion completed then proceed with a
+
+        // let p3 = Promise.allSettled([prom1, prom12])
+        let p3 = Promise.race([prom1, prom12])
+        // let p3 = Promise.allSettled([prom1, prom12])
+        p3.then((a)=>{
+            console.log(a);
+        }).catch((err)=>{
+        console.log(err);
+        })
+
+
+
+
+    </script>
+</body>
+</html>

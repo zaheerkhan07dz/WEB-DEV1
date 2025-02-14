@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            
+            color: rgb(150, 32, 32);
+        }
+    </style>
+</head>
+<body>
+    <h1>Business Name generator</h1>
+    <script>
+        let  rand = Math.random()
+        let first, second, third
+        //generating first word
+        if(rand<0.33){
+             first = "Great"
+             
+        }
+        else if(rand>=0.33 && rand<0.66){
+            first = "Best"
+        }
+        else {
+            first = "A-1"
+        }
+        console.log(rand)//printing second random number
+        //generating second word
+        rand = Math.random()
+        if(rand<0.33){
+             second = "Food"
+             
+        }
+        else if(rand>=0.33 && rand<0.66){
+            second = "Garments"
+        }
+        else {
+            second = "Supplements"
+        }
+        console.log(rand)//printing third random number
+        //generating third word
+        rand = Math.random()
+        if(rand<0.33){
+             third = "ltd"
+             
+        }
+        else if(rand>=0.33 && rand<0.66){
+            third = "Sons"
+        }
+        else {
+            third = "Bros"
+        }
+        console.log(rand)//Printing first random number
+        console.log(`${first} ${second} ${third}`)//Printing Final Business Name
+    </script>
+</body>
+</html>

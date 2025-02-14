@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object and classes</title>
+</head>
+<body>
+
+    <script>
+        // let animal ={
+        //     eats:true
+        // }
+
+        // let rabit ={
+        //     jumps:true
+
+        // }
+
+        // rabit.__proto__ = animal;
+
+        class Animal{
+            constructor(name){
+                this.name = ("object is created");
+            }
+            eats(){
+                console.log("eating");
+            }
+            jumps(){
+                console.log("jumping");
+            }
+
+        }
+
+        class lion extends Animal{
+            constructor(name) {
+                super(name)
+                this.name = name
+                console.log("object is created 2");
+                
+            }
+            eats(){
+                super.eats()//issey super class ka method bhi run ho rha hai
+                console.log("lion is eating ");
+            }
+
+        }
+
+
+        let a = new Animal("bunny")
+        console.log(a);
+
+        let l = new lion("shera")
+        console.log(l);
+
+        //use instance of in console
+    </script>
+    
+</body>
+</html>

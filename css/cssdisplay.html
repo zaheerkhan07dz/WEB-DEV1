@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Property</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            background-color: rgb(156, 121, 189);
+            border: 2px solid red;
+            display: inline block;
+            padding: 45px;
+            margin: 34px;
+            display: grid;
+            width: 344px;
+            display: flex;
+            justify-content: center;
+        }
+        .box1{
+            /* display: none; */ /*neither keep the place nor element*/
+            /* visibility: hidden; */ /*keep the place*/
+            background-color: rgb(156, 121, 189);
+            border: 2px solid red;
+            display: grid;
+            padding: 45px;
+            margin: 34px;
+            width: 344px;
+        }
+        /*https://developer.mozilla.org/en-US/docs/Web/CSS/display*/
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        Lorem ipsum dolor 
+    </div>
+    <div class="box1">
+        Lorem, ipsum dolor.
+    </div>
+    <span>i am a good</span>
+    <span>boy</span>
+</body>
+
+</html>

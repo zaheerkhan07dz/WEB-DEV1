@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+    <style>
+        .container{
+           background-color: rgb(101, 48, 48);
+           width: vw;
+           height: 40vh;
+        }
+        .box{
+          background-color: antiquewhite;
+          width: 5vw;
+          height: 4vh;
+          transition-property: unset;
+          transition-duration: 3s;
+          transition-timing-function: ease-in-out;
+          transition-delay: 1s;
+          /* transition: transform 2s ease-in 1s; */
+          /* we can add all properties in a  single line */
+        }
+        .translate{
+            transform: translateX(10vw) translateY(10vh);
+            background-color: rgb(224, 97, 224);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box translate">
+
+        </div>
+    </div>
+</body>
+</html>

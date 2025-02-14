@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Posiition</title>
+    <style>
+        .box {
+            border: 2px solid black;
+            height: 435px;
+            padding: 3px;
+            margin: 3px;
+            width: 85vw;
+
+        }
+
+        .box1 {
+            background-color: rgb(238, 162, 162);
+            position: relative;
+            /* position: absolute; */
+            /* top: 70px;
+            left: 13px; */
+            /* z-index: 100; */
+            /* height: 53px; */
+            /* position: sticky; */
+            /* top: 0px; */
+        }
+
+        .box2 {
+            background-color: antiquewhite;
+            position: relative;
+            /* top: 34px; */
+            bottom: 98px;
+            /* left: 34px; */
+            /* right: 56px; */
+        }
+
+        .box3 {
+            background-color: rgb(128, 42, 42);
+        }
+
+        .box4 {
+            background-color: rgb(152, 237, 152);
+        }
+        .parent{
+            padding: 3px;
+            margin: 34px;
+            height: 7980px;
+            border: 2px solid purple;
+            position: relative;
+            /* transform: translate(0); */
+            /* filter: invert(0);
+            perspective: 0em; */
+            /* these three also works as relative position in parent element */
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+
+    </div>
+
+
+</body>
+
+</html>
